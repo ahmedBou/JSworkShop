@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>click me</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+      /* body { */
+      /* background: blue; */
+      /* }  */
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <button class="btn" id="btn">click me</button>
+
+    <script>
+      document.body.style.backgroundColor = "blue";
+      document.body.style.color = "yellow";
+      document.getElementById("btn").style.color = "red";
+      //   console.log(window);
+      const btn = document.getElementById("btn");
+      const name = btn.nodeName;
+      const css = btn.style;
+      //   console.log(btn);
+      //   console.log(name);
+      //   console.log(css);
+      console.dir(document);
+    </script>
+  </body>
+</html>

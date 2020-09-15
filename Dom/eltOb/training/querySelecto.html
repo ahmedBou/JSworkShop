@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="result">
+      <li class="special">apple</li>
+      <li>orange</li>
+      <li class="special">banana</li>
+      <li>pear</li>
+      <li class="special last">tomato</li>
+    </ul>
+    <!-- By far, the most versatile method, elem.querySelectorAll(css) 
+      returns all elements inside elem matching the given CSS selector.
+      Here we look for all <li> elements that are last children: -->
+    <ul>
+      <li>The</li>
+      <li>test</li>
+    </ul>
+    <ul>
+      <li>has</li>
+      <li>passed</li>
+    </ul>
+    <script>
+      let elements = document.querySelectorAll("ul");
+      // console.log(elements.innerHTML);
+      for(let elem of elements){
+        // console.log(elem.innerHTML);
+        alert(elem.innerHTML)
+      }
+
+
+
+      // querySelector('any css'); - selects single
+      // querySelectorAll('any css') - selects all
+
+      // const result = document.querySelector("#result");
+      // result.style.backgroundColor = "blue";
+
+      // const item = document.querySelector(".special");
+      //   console.log(item);
+
+      // const lastItem = document.querySelector("li:last-child");
+      //   console.log(lastItem);
+
+      // const list = document.querySelectorAll(".special");
+      //   console.log(list);
+      // list.forEach(function(item) {
+      //   console.log(list);
+      //   item.style.color = "white";
+      // });
+    </script>
+  </body>
+</html>

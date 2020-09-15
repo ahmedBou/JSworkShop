@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .colors {
+        background: red;
+        color: white;
+      }
+      .text {
+        font-size: 2rem;
+        letter-spacing: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="first" class="colors">i'm first element</h1>
+    <h1 id="second">i'm second element</h1>
+    <h1 id="third">i'm third element</h1>
+    <script>
+      // adding css classes dynamicly to our element using js
+
+      const first = document.getElementById("first");
+      const second = document.getElementById("second");
+      const third = document.querySelector("#third");
+
+      const classValue = first.className;
+      console.log(classValue);
+      second.className = "colors";
+      console.log(second);
+      second.className = " text";
+      //classList
+      const classes = third.classList;
+      console.log(classes);
+    
+      // add class
+      third.classList.add('colors');
+      third.classList.add('text');
+      
+      // remove
+      third.classList.remove('text');
+      
+      // contains
+      let result = third.classList.contains('colors');
+      if(result){
+        console.log("this element does have the class");
+      }else{
+        console.log("this element does not have the class");
+      }
+    </script>
+  </body>
+</html>

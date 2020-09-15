@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Call Stack</h1>
+    <p>The very first function call that the javascript interpreter hits or reaches will be added to the call
+        stack that function will be carried out.
+        And if there are any other function calls within that first function they will be added to the top of
+        the call stack.
+        And that continues until one of those functions returns a value at which point it's removed from the
+        stack.
+        It's gone.
+        And then the function that came before it will hopefully finish maybe there are some other function
+        calls in which case those are added to the top of the stack and then removed or popped off as they complete.
+
+        I think this will become clear if we have an example.
+
+        So on the left I have a couple different functions.
+
+        The first one is called is right triangle.
+
+        It accepts three different arguments a B and C three different numbers.
+
+        And it should return true if a and b if we square them and add them together you get C squared.
+
+        A squared plus b squared equals c squared.
+
+        So if something is a right triangle the third value here C would be the hypotenuse.
+
+        These two would be the other side's K remember what they're called.
+
+        But we have two sides on a triangle and then the hypotenuse in a right triangle.
+
+        So nine would be three times three sixteen four times four in twenty five five times five.
+
+        And that indeed would be a real right triangle nine plus sixteen does equal twenty five.
+
+        Okay.
+
+        So is right triangle is not a function that just returns something immediately it needs to call other
+
+        functions.
+
+        It's going to return if the square of a plus the square of B is triple equals to the square of C so
+
+        square of a needs to be called and that in turn calls multiply x times x.
+
+        So we pass in three multiply three times three which is a different function which returns to values
+
+        the product of them.
+
+        So when the interpreter encounters the very first function call is right triangle three four or five
+
+        it's added to the call stack which is what I'm representing over here and we can't just get a value
+
+        back immediately.
+
+        There are multiple function calls in here that happen first.
+
+        So square of a which is three in our case square of three we'll be the first thing to be added to the
+ 
+        call stack which is what this side is square of three does not turn anything either.
+  
+        It calls a different function.
+
+        Multiply three comma three which I'm showing here.
+
+        So then multiply is added to the stack.
+
+        So this function has not finished running.
+
+        This one has not finished.
+
+        This one doesn't call any other functions so it returns three times three which is nine.
+
+        And when it returns a value it is removed from the stack.
+
+        The last thing in is the first thing out.
+
+        So then square of three.
+
+        Now has a value back from multiply which was nine.
+
+        So it can return that value.
+  
+        So it's popped off now we end up with is right triangle.
+
+        That's the current function that is being executed.
+
+        It's been waiting a while because those I mean a while it's relative.
+
+        But I had to wait for two other function calls to return.
+
+        So now you can kind of fill in the blanks here.
+
+        The first part square of a square of three is nine.
+
+        We have a value.
+
+        Then it moves on.
+
+        All right.
+
+        Is there another function call.
+
+        Yep there is.
+
+        Square of four which is B so square of B so square is added to the top of the call stack.
+
+        And when I say top it's not really a top and bottom situation it's just a data structure.
+
+        Think of it kind of like an array but much simpler.
+
+        But I'm just using top and bottom here to help explain visually what's going on.
+
+        Like a stack of books.
+
+        So square a four doesn't return a value right away at least it has to call multiply for column A four.
+
+        So that's added to the top of the stack that does return a value X times Y four times for 16.
+
+        So that pops off the stack then square off for now has a value for this.
+
+        It fills in that blank sixteen which means that it's done because it returns sixteen and then we fill
+
+        in the blank in is right triangle.
+
+        We now have this done this done.
+
+        And then we have our triple equals square of C square five.
+        
+
+        So five is added to the call stack that doesn't return a value yet it has to figure out what multiply
+
+        a five comma five is.
+
+        So that is the next function call added to the call stack that returns twenty five which means that
+    
+        square now has value.
+
+        So both of those are popped off and then we end up with twenty five here no more function calls.
+
+        Now just some simple math.
+
+        And actually the order here it probably evaluates this first anyway nine plus 16.
+
+        It doesn't actually matter here.
+
+        We're just talking about function calls but we end up with nine for sixteen triple equals twenty five.
+
+        That is true.
+
+        So this function finally returns true at least in this case and it is popped off the stack call stack
+        
+
+        is empty.
+
+        It returns true and we're done.
+ 
+        So that is a brief intro to the call stack in the next video I'll show you an example of how you can
+        actually see it using the dev tools or at least a representation of it with your own code and you can
+
+        step through it step by step.
+
+        All right.
+
+        So let's do that next.
+        </p>
+    <script src="app.js"></script>    
+</body>
+</html>

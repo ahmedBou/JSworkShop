@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="result">
+      <li class="first">first</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+      <li id="last">last</li>
+    </ul>
+    <script>
+      // previous sibling
+      // nextSibling
+      // return whitespace
+      const first = document.querySelector(".first");
+      //   console.log(first);
+      //   const second = (first.nextSibling.nextSibling.style.color = "red");
+      //   console.log(second);
+      first.nextElementSibling.style.color = "red";
+      const last = document.querySelector("#last");
+      //   console.log(last);
+
+      //   const third = last.previousSibling.previousSibling;
+      //   console.log(third);
+      //   console.log(last.nextSibling.nextSibling);
+    </script>
+  </body>
+</html>

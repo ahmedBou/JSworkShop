@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>traverse the DOM tree</title>
+  </head>
+  <body>
+    <ul id="result">
+      <li>apple</li>
+      <li>orange</li>
+      <li>banana</li>
+      <li>pear</li>
+      <li>tomato</li>
+    </ul>
+    <script>
+      // childNodes - returns all childNodes including whitespace
+      // wich is treated as a text node
+      //children
+      // firstChild
+      // lastChild
+      const result = document.querySelector("#result");
+      const allChildren = result.childNodes;
+      //   console.log(allChildren);
+      const children = result.children;
+      //   console.log(children);
+      console.log(result.firstChild);
+      console.log(result.lastChild);
+    </script>
+  </body>
+</html>

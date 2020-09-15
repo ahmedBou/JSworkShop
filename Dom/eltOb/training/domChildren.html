@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom children</title>
+</head>
+<body>
+    <div>Users:</div>
+    <ul>
+      <li>John</li>
+      <li>Pete</li>
+    </ul>
+</body>
+</html>
+<script>
+    // For each of the following, give at least one way of how to access them:
+        // 1) The <div> DOM node?
+        // console.log(document.body.firstElementChild);
+        // console.log(document.body.childNodes[1]);
+        // console.log(document.body.children);
+    
+    // 2) The <ul> DOM node?
+        // console.log(document.body.firstElementChild.nextElementSibling);
+        // console.log(document.body.childNodes[3]);
+        // console.log(document.body.children[1]);
+        // console.log(document.body.lastElementChild);
+
+    // 3) The second <li> (with Pete)?
+        console.log(document.body.children[1].lastElementChild);
+        // get <ul>, and then get its last element child
+        document.body.lastElementChild.lastElementChild
+
+    
+
+</script>

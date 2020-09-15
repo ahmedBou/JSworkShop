@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    left: 350px;
+    background-color: currentcolor;
+    opacity: rgba(76, 175, 80, 0.3);
+}
+
+.test-action{
+    display: none;
+}
+
+.test-btn{
+    position: absolute;
+    bottom: 5px;
+}
+

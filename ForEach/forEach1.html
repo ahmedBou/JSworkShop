@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>forEach</h1>
+    <p>does not return new array</p>
+    <p></p>
+    <script>
+      const people = [
+        { name: "bob", age: 20, position: "developer" },
+        { name: "peter", age: 20, position: "designer" },
+        { name: "pattu", age: 20, position: "the boss" }
+      ];
+
+      // function showPerson(person) {
+      // console.log(person.position);
+      // }
+      //   people.forEach(person);
+      people.forEach(function(person) {
+        console.log(person);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="first" id="special">i have class of first</li>
+      <a href="first.html" id="link">random link</a>
+      <li>i have no attribute</li>
+    </ul>
+
+    <script>
+      // getAttribute
+      // setAttribute
+      const first = document.querySelector(".first");
+      const classValue = first.getAttribute("class");
+      const idValue = first.getAttribute("id");
+      //   console.log(classValue, idValue);
+      const link = document.getElementById("link");
+      console.log(link);
+      const showhref = link.getAttribute("href");
+      console.log(showhref);
+
+      const last = link.nextElementSibling;
+      last.setAttribute("class", "first");
+      last.textContent = "i also have a class of first";
+      console.log(last);
+
+      const links = document.querySelectorAll(".first");
+      console.log(links);
+    </script>
+  </body>
+</html>

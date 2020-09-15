@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+        background: lightgray;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Select the element or group of elements the we want</p>
+    <p>Decide the effect we want to apply to the selection</p>
+    <h1 id="title">Hello</h1>
+    <button class="btn" id="btn">click me</button>
+
+    <div id="elem">
+      <div id="elem-content">Element</div>
+    </div>
+
+    <script>
+      const h1 = document.getElementById("title");
+      h1.style.color = "red";
+        console.dir(h1);
+        // console.log(h1);
+
+      document.getElementById("title").style.color = "red";
+      // document.getElementById("btn").style.backgroundColor = "blue";
+      const btn = document.getElementById("btn");
+      btn.style.backgroundColor = "red";
+      btn.style.color = "white";
+      
+      // 2)<div id="elem">=========================================================
+      // elem.style.color="red";
+      // id="elem-content" has a hyphen inside, so it can't be a variable name
+      // ...but we can access it using square brackets: window['elem-content']
+      // window["elem-content"].style.color= "red";
+      let elem = 5;
+      alert(elem);
+    </script>
+  </body>
+</html>
