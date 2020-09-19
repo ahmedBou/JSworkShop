@@ -8,10 +8,12 @@
     <style></style>
   </head>
   <body>
+
     <p>Select the element or group of elements the we want</p>
     <p>Decide the effect we want to apply to the selection</p>
     <h2>hello world</h2>
     <h2>hello people</h2>
+
     <ul>
       <li>apple</li>
       <li>orange</li>
@@ -19,24 +21,29 @@
       <li>pear</li>
       <li>tomato</li>
     </ul>
+
     <script>
-      // getElementsByTagName('name')
+      // getElementsByTagName('name');
       const f_h1 = document.getElementsByTagName("h2");
       f_h1[1].style.color = "red";
       //   console.log(f_h1.length);
       //   console.dir(f_h1);
       const items = document.getElementsByTagName("li");
-      //   console.log(items);
+        console.log(items);
 
       // items.forEach(function(item) {
-      // console.log(item);
-      //   });
+      //   console.log(item);
+      // });
+
       items[2].style.color = "orange";
       const better = [...items];
       better.forEach(function(item) {
-        // console.log(item);
+        console.log(item);
       });
-      console.log(item);
+      // the first one is a node list.
+      // console.log(items);
+
+      // we transform it to an array.
       console.log(better);
     </script>
   </body>

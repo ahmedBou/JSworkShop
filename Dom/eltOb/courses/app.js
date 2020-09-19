@@ -1,18 +1,26 @@
-// getElementById(element-id): The element ID is the ID attribute of the element.Returned as an HTMLElement object.
+// getElementById(element-id): The element ID is the ID attribute of the element.
+// Returned as an HTMLElement object.
 let byId = document.getElementById("user-id");
-console.log(byId);
+// console.log(byId);
 
-// getElementsByTagName(element-name): The element name is the static name of HTML elements such as body, div, p, footer, ol, and ul.
-// This returns a NodeList object. A NodeList object is similar to an array of objects.
+
+// getElementsByTagName(element-name): 
+// The element name is the static name of HTML elements 
+// such as body, div, p, footer, ol, and ul.
+// This returns a NodeList object 
+// A NodeList object is similar to an array of objects.
 let tagName = document.getElementsByTagName("div");
 console.log(tagName);
+
 
 // getElementsByClassName(css-class-name): The css class name is the class attribute of the elements.
 // This returns a NodeList object. A NodeList object is similar to an array of objects.
 let className = document.getElementsByClassName("container");
 console.log(className);
 
-// querySelector(selectors): The selectors are like the selectors that are used in CSS. This returns an HTMLElement object 
+
+// querySelector(selectors): The selectors are like the selectors that are used in CSS. 
+// This returns an HTMLElement object .
 // for the first element that's matched.
 let queSelect = document.querySelector("li");
 console.log(queSelect);
@@ -23,15 +31,17 @@ console.log(queSelect);
 let queSelectAll = document.querySelectorAll("li");
 console.log(queSelectAll);
 
+
 // createElement(tag name): This creates an HTMLElement object for the HTML tag
 // name that's supplied.
 let creatElt = document.createElement("li");
 console.log(creatElt);
 
+
 // createTextNode(data): This creates a Text object that can be placed inside an HTML
 // element, for example, inside an h1 or a p element. The data argument is a string.
 let createTxtNode = document.createTextNode("milky")
-// console.log(createTxtNode);
+console.log(createTxtNode);
 
 // The createElement method returns an HTMLElement object. It provides the appendChild
 // method, which we can use in this instance. For the appendChild method argument, the
