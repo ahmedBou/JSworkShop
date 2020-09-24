@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>createElt CreateTxtNodes AppendChild</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result">
+      <h1 class="red">i'm the child of result</h1>
+    </div>
+    <script>
+        // createElement('element')
+        // createTextNode('text content')
+        // element.appendChild(childElement)
+    
+        // const result = document.querySelector('#result');
+    
+        // create empty element
+    
+        const bodyDiv = document.createElement('div');
+        console.log(bodyDiv);
+        // create text node
+        bodyDiv.classList.add('red');
+        const text = document.createTextNode('a simple body div');
+        // console.log(text);
+        bodyDiv.appendChild(text);
+
+        // console.log(bodyDiv);
+        document.body.appendChild(bodyDiv);
+    
+        const heading = document.createElement('h2');
+        const headingText = document.createTextNode('dynamic heading');
+        heading.appendChild(headingText);
+        heading.classList.add('blue');
+        // document.body.appendChild(heading);
+        result.appendChild(heading);
+    
+        console.log(result.children);
+    
+    </script>
+  </body>
+
+  
+
+</html>
+
