@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result{
+            background-color: blue;
+            color: cornsilk;
+        }
+        
+        button{
+            background-color: crimson;
+            padding: 10px;
+            border:1.5px solid darkblue ;
+            border-radius: 5%;
+            color: ghostwhite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>events in javascript</h1>
+    </div>
+    <p>hey, I can trigger an event</p>
+    <button>click me</button>
+
+</body>
+<script>
+    const first = document.querySelector('div');
+    const sec = document.querySelector('p');
+    console.log(sec);
+    console.log(first);
+    const third = document.querySelector('button');
+
+    third.addEventListener("click", ()=>{
+        if(first.classList.contains('result')){
+            first.classList.remove('result');
+        }else{
+            first.classList.add('result')
+        }
+   
+    });
+
+    sec.addEventListener('mouseenter', ()=>{
+        first.style = "padding: 2px; background-color: red; text-transform: uppercase; color: white";
+      
+        console.log("ioxw");
+    })
+    sec.addEventListener('mouseleave', ()=>{
+        first.style = " ";
+      
+        console.log("ioxw");
+    })
+
+</script>
+</html>

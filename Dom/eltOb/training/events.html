@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      .blue {
+        background: blue;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 10px;
+      }
+      .btn {
+        background: #f15025;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>events in javascript</h2>
+    <p>hey, I can trigger an event</p>
+    <button class="btn">click me</button>
+    <!-- javascript -->
+    <script>
+        const heading = document.querySelector('h2');
+        const btn = document.querySelector('.btn');
+
+        const text = document.querySelector('p');
+        // once I have the button we get back our node object.
+        // And on that node object we have a method with a name of addEventListener.
+       // But the whole idea behind adding a callback function is that I don't want that functionality to run
+        // right away to be executed right away.
+       // I only want it to be executed once that particular event takes place.
+      
+      text.addEventListener('mouseenter', function() {
+        heading.classList.add('red');
+      });
+      text.addEventListener('mouseleave', function() {
+        heading.classList.remove('red');
+      });
+      btn.addEventListener('click', function() {
+        if (heading.classList.contains('blue')) {
+          heading.classList.remove('blue');
+        } else {
+          heading.classList.add('blue');
+        }
+      });
+      </script>
+  </body>
+</html>
