@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            background-color: red;
+            color: whitesmoke;
+            border: none;
+            padding: 0 6px 0 6px;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">click me</button>
+    <h1>some heading</h1>
+</body>
+    <script>
+        const btn = document.querySelector('.btn');
+        const heading= document.querySelector('h1');
+        btn.addEventListener('click', ()=>{
+            btn.style = "letter-spacing:1rem; background-color: blue";
+        });
+        heading.addEventListener('click', e=>{
+            console.log(e.currentTarget);
+        }); 
+    </script>
+</html>
