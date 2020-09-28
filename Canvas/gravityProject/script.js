@@ -9,7 +9,7 @@ let player = {
     x:500,
     y:0,
     dx: 0,
-    dy: 0,
+    dy: 3,
     speed: 0.02,
     width: 100,
     height: 100,
@@ -18,10 +18,12 @@ let player = {
     render: function(){
         context.fillStyle = player.color;
         context.fillRect(player.x, player.y, player.width, player.height);
+        console.log(player.y);
     }, 
     moveY: function(){
-        player.dy += this.speed;
-        player.y += this.dy;
+        this.speed /= this.dy;
+        player.dy = this.speed;
+        player.y += this.dy ;
     }
 }
 
@@ -33,7 +35,7 @@ setInterval(()=>{
 
     player.moveY();
     player.render();
-}, 1000)
+}, 60/1000)
 
 
 

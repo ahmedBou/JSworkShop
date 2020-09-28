@@ -22,4 +22,5 @@ function modifyText(new_text){
    
 }
 let el = document.getElementById("outside");
-el.addEventListener("click",function(){modifyText("foor")}, true)
+el.addEventListener("click",function(){
+    modifyText("foor")}, true)
