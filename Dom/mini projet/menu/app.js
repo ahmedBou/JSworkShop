@@ -87,6 +87,7 @@ const containerBtn = document.querySelector('.btn-container');
 window.addEventListener('DOMContentLoaded', function(){
   displayMenuItems(menu);
   displayMenuBtn();
+  // let 3data = "1";
 });
 
 
