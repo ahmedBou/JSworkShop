@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ 
+</body>
+<script>
+
+function arraySum(array){
+  var total = 0;
+  console.log("The average of "); 
+  for (var i = 0; i < array.length; i++){
+    total += array[i];  
+    console.log(array[i]);
+  }
+  console.log("is: " + total/(array.length));
+  console.log("");    
+}
+
+arraySum([0]);
+arraySum([1,2,3]);
+arraySum([1,2,3,4]); 
+arraySum([1,4,4,4,1]); 
+arraySum([-12, -13, 512, 1337]);
+</script>
+</html>
